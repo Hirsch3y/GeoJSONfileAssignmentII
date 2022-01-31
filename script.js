@@ -83,10 +83,11 @@ var geojsonFeature = {
   ]
 };
 function onEachFeature(feature, layer) {
-    if (feature.properties && feature.properties["Restaurants"]) {
+    if (feature.properties && feature.properties["Restaurants "]) {
         layer.bindPopup(feature.properties["Restaurants "]);
     }
 }
 var feat = L.geoJSON(geojsonFeature, {
     onEachFeature: onEachFeature
 }).addTo(map);
+
